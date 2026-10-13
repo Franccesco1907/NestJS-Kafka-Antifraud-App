@@ -51,6 +51,7 @@ services:
       - kafka
     volumes:
       - ./api-transaction:/usr/src/app
+      - /usr/src/app/node_modules
     networks:
       - app-network
   ms-antifraud:
@@ -68,6 +69,7 @@ services:
       - kafka
     volumes:
       - ./ms-antifraud:/usr/src/app
+      - /usr/src/app/node_modules
     networks:
       - app-network
   k6:
